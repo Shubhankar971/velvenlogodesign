@@ -1,0 +1,99 @@
+/* Background */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+/* Logo Circle */
+.logo {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #1e3c72, #0b0f2f);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+/* Orbit Ring */
+.orbit {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border: 2px solid rgba(255,255,255,0.1);
+  border-radius: 50%;
+  animation: rotate 10s linear infinite;
+}
+
+/* Rocket */
+.rocket {
+  width: 60px;
+  height: 120px;
+  background: linear-gradient(to bottom, #ffffff, #dfe9f3);
+  border-radius: 30px 30px 10px 10px;
+  position: relative;
+  z-index: 2;
+  animation: float 2s ease-in-out infinite;
+}
+
+/* Rocket Window */
+.window {
+  width: 22px;
+  height: 22px;
+  background: #00c6ff;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px #00c6ff;
+}
+
+/* Flame */
+.flame {
+  width: 20px;
+  height: 50px;
+  background: linear-gradient(to bottom, #ff512f, #f09819);
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  animation: flame 0.25s infinite alternate;
+}
+/* Text */
+.title {
+  margin-top: 30px;
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+
+.subtitle {
+  font-size: 18px;
+  letter-spacing: 8px;
+  color: #ff7a18;
+}
+
+/* Animations */
+@keyframes flame {
+  from { transform: translateX(-50%) scaleY(1); }
+  to { transform: translateX(-50%) scaleY(1.4); }
+}
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
